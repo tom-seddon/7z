@@ -123,7 +123,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Mpr.lib;htmlhelp.lib;Urlmon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Mpr.lib;htmlhelp.lib;Urlmon.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -165,7 +165,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Mpr.lib;htmlhelp.lib;Urlmon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Mpr.lib;htmlhelp.lib;Urlmon.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">
@@ -207,7 +207,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Mpr.lib;htmlhelp.lib;Urlmon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Mpr.lib;htmlhelp.lib;Urlmon.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">
@@ -246,7 +246,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Mpr.lib;htmlhelp.lib;Urlmon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Mpr.lib;htmlhelp.lib;Urlmon.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -264,8 +264,6 @@
     <Image Include="Info2.bmp" />
     <Image Include="Move.bmp" />
     <Image Include="Move2.bmp" />
-    <Image Include="Parent.bmp" />
-    <Image Include="Properties.bmp" />
     <Image Include="Test.bmp" />
     <Image Include="Test2.bmp" />
   </ItemGroup>
@@ -465,7 +463,6 @@
     <ClInclude Include="..\..\..\Common\ComTry.h" />
     <ClInclude Include="..\..\..\Common\Defs.h" />
     <ClInclude Include="..\..\..\Common\DynamicBuffer.h" />
-    <ClInclude Include="..\..\..\Common\Exception.h" />
     <ClInclude Include="..\..\..\Common\IntToString.h" />
     <ClInclude Include="..\..\..\Common\Lang.h" />
     <ClInclude Include="..\..\..\Common\MyBuffer.h" />
@@ -496,7 +493,6 @@
     <ClInclude Include="..\..\..\Windows\Control\ToolBar.h" />
     <ClInclude Include="..\..\..\Windows\Control\Window2.h" />
     <ClInclude Include="..\..\..\Windows\Defs.h" />
-    <ClInclude Include="..\..\..\Windows\Device.h" />
     <ClInclude Include="..\..\..\Windows\DLL.h" />
     <ClInclude Include="..\..\..\Windows\ErrorMsg.h" />
     <ClInclude Include="..\..\..\Windows\FileDir.h" />

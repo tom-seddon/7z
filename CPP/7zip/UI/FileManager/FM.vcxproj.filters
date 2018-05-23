@@ -81,12 +81,6 @@
     <Image Include="Move.bmp">
       <Filter>Spec</Filter>
     </Image>
-    <Image Include="Parent.bmp">
-      <Filter>Spec</Filter>
-    </Image>
-    <Image Include="Properties.bmp">
-      <Filter>Spec</Filter>
-    </Image>
     <Image Include="Test.bmp">
       <Filter>Spec</Filter>
     </Image>
@@ -750,9 +744,6 @@
     <ClInclude Include="..\..\..\Windows\Defs.h">
       <Filter>Windows</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Windows\Device.h">
-      <Filter>Windows</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Windows\DLL.h">
       <Filter>Windows</Filter>
     </ClInclude>
@@ -841,9 +832,6 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Common\DynamicBuffer.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Common\Exception.h">
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Common\IntToString.h">
