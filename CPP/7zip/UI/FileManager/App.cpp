@@ -54,7 +54,7 @@ void CPanelCallbackImp::SetFocusToPath(unsigned index)
     newPanelIndex = g_App.LastFocusedPanel;
   _app->RefreshTitle();
   _app->Panels[newPanelIndex]._headerComboBox.SetFocus();
-  _app->Panels[newPanelIndex]._headerComboBox.ShowDropDown();
+  //_app->Panels[newPanelIndex]._headerComboBox.ShowDropDown();
 }
 
 
