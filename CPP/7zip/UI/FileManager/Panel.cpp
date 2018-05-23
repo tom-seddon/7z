@@ -4,6 +4,7 @@
 
 #include <Windowsx.h>
 // #include <stdio.h>
+#include <Shlwapi.h>
 
 #include "../../../Common/IntToString.h"
 #include "../../../Common/StringConvert.h"
@@ -478,6 +479,10 @@ bool CPanel::OnCreate(CREATESTRUCT * /* createStruct */)
       LONG_PTR(ComboBoxSubclassProc));
   */
   _comboBoxEdit.Attach(_headerComboBox.GetEditControl());
+
+  // Consider, maybe, SHACF_FILESYS_DIRS ('Same as SHACF_FILESYS_ONLY except it
+  // only includes directories, UNC servers, and UNC server shares.').
+  SHAutoComplete(HWND(_comboBoxEdit), SHACF_FILESYSTEM | SHACF_USETAB);
 
   // _comboBoxEdit.SendMessage(CCM_SETUNICODEFORMAT, (WPARAM)(BOOL)TRUE, 0);
 
