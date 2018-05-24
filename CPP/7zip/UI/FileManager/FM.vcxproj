@@ -123,43 +123,51 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)dist\7z1805\</OutDir>
     <IntDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)-$(PlatformName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)dist\7z1805-x64\</OutDir>
     <IntDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)-$(PlatformName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)dist\7z1805\</OutDir>
     <IntDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)-$(PlatformName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)dist\7z1805-x64\</OutDir>
     <IntDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)-$(PlatformName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)dist\7z1805\</OutDir>
     <IntDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)-$(PlatformName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugU|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)dist\7z1805-x64\</OutDir>
     <IntDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)-$(PlatformName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)dist\7z1805\</OutDir>
     <IntDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)-$(PlatformName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseU|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</OutDir>
+    <OutDir>$(SolutionDir)dist\7z1805-x64\</OutDir>
     <IntDir>$(SolutionDir).build\$(Configuration)-$(PlatformName)\</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)-$(PlatformName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

@@ -18,6 +18,10 @@ My party, and I don't have to justify myself to anybody ;)
 
 4. Run.
 
+There are unzipped distributions of 7-Zip in the `dist` folder. Each
+configuration builds its exe into the appropriate distribution's
+folder, so it can find all the distribution files when it's run.
+
 # Changes
 
 - File/folder autocomplete when typing in the address bar

@@ -1,3 +1,7 @@
 .vs/
 *.aps
 .build/
+dist/**/FM-*.exe
+dist/**/FM-*.ilk
+dist/**/FM-*.pdb
+
