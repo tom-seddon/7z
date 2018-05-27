@@ -404,6 +404,14 @@ void CPanel::EditCopy()
   ClipboardSetText(_mainWindow, s);
 }
 
+void CPanel::EditCopyPath()
+{
+  UString s = GetFsPath();
+
+  if (!s.IsEmpty())
+    ClipboardSetText(_mainWindow, s);
+}
+
 void CPanel::EditPaste()
 {
   /*
@@ -423,7 +431,14 @@ void CPanel::EditPaste()
   // InvokeSystemCommand("paste");
 }
 
+void CPanel::EditPastePath()
+{
+  UString s;
+  if (!ClipboardGetTextString(s))
+    return;
 
+  BindToPathAndRefresh(s);
+}
 
 struct CFolderPidls
 {

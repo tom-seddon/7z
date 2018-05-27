@@ -286,14 +286,22 @@ bool CPanel::OnKeyDown(LPNMLVKEYDOWN keyDownInfo, LRESULT &result)
       }
       return false;
     case 'C':
-      if (ctrl)
+      if (ctrl && shift)
+      {
+        EditCopyPath();
+      }
+      else if (ctrl)
       {
         EditCopy();
         return true;
       }
       return false;
     case 'V':
-      if (ctrl)
+      if (ctrl && shift)
+      {
+        EditPastePath();
+      }
+      else if (ctrl)
       {
         EditPaste();
         return true;

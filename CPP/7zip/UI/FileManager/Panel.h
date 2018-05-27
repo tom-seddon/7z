@@ -598,7 +598,9 @@ public:
   void Properties();
   void EditCut();
   void EditCopy();
+  void EditCopyPath();
   void EditPaste();
+  void EditPastePath();
 
   int _startGroupSelect;
 

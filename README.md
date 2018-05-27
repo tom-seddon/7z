@@ -28,6 +28,12 @@ folder, so it can find all the distribution files when it's run.
 
 - Address bar dropdown doesn't drop down when focused. Tap Alt+Down if
   you want it
+  
+- Press Ctrl+Shift+C to copy file system path of current panel to the
+  clipboard. (If there's no file system path - e.g., you're looking at
+  the drives list - this does nothing)
+  
+- Press Ctrl+Shift+V to paste file system path and go there
 
 More to come, perhaps, if I get annoyed enough by something...
 

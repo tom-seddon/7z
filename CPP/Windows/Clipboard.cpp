@@ -60,6 +60,46 @@ bool ClipboardGetTextString(AString &s)
 }
 */
 
+static bool ClipboardGetTextString(UString &s, UINT format, int cp) {
+  CClipboard clipboard;
+
+  if (!clipboard.Open(NULL))
+    return false;
+
+  HGLOBAL h = ::GetClipboardData(format);
+  if (!h)
+    return false;
+
+  NMemory::CGlobalLock globalLock(h);
+  void *p = globalLock.GetPointer();
+  if (!p)
+    return false;
+
+  if (cp < 0)
+    s = (const wchar_t *)p;
+  else
+    s = MultiByteToUnicodeString((const char *)p, (UINT)cp);
+
+  return true;
+}
+
+bool ClipboardGetTextString(UString &s)
+{
+  s.Empty();
+
+  if (ClipboardGetTextString(s, CF_UNICODETEXT, -1))
+    return true;
+
+  if (ClipboardGetTextString(s, CF_TEXT, CP_ACP))
+    return true;
+
+  if (ClipboardGetTextString(s, CF_OEMTEXT, CP_OEMCP))
+    return true;
+
+  return false;
+}
+
+
 /*
 bool ClipboardGetFileNames(UStringVector &names)
 {

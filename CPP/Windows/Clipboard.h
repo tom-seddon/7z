@@ -20,7 +20,7 @@ public:
 bool ClipboardIsFormatAvailableHDROP();
 
 // bool ClipboardGetFileNames(UStringVector &names);
-// bool ClipboardGetTextString(AString &s);
+ bool ClipboardGetTextString(UString &s);
 bool ClipboardSetText(HWND owner, const UString &s);
 
 }
