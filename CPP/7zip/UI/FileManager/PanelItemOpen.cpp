@@ -786,7 +786,21 @@ static HRESULT StartEditApplication(const UString &path, bool useEditor, HWND wi
     command += "notepad.exe";
   }
 
+  int numArgs;
+  LPWSTR *args = CommandLineToArgvW(command, &numArgs);
+  if (!args || numArgs < 1)
+    return E_FAIL;
+
+  command = args[0];
+
   UStringVector params;
+  for (int i = 1; i < numArgs; ++i) {
+    params.Add(args[i]);
+  }
+
+  LocalFree(args);
+  args = NULL;
+
   params.Add(path);
 
   HRESULT res = StartAppWithParams(command, params, process);
