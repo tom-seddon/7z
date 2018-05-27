@@ -96,7 +96,10 @@ static void Edit_BrowseForFile(NWindows::NControl::CEdit &edit, HWND hwnd)
   if (MyBrowseForFile(hwnd, 0, prg, NULL, L"*.exe", resPath))
   {
     resPath.Trim();
-    cmd = resPath;
+
+    cmd = "\"";
+    cmd += resPath;
+    cmd += "\"";
     /*
     if (!param.IsEmpty() && !resPath.IsEmpty())
     {
