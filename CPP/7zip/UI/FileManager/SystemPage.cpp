@@ -257,9 +257,16 @@ bool CSystemPage::OnInit()
 
 static UString GetProgramCommand()
 {
+  FString program;
+  if (!NDLL::MyGetModuleFileName(program))
+  {
+    program = fs2us(NDLL::GetModuleDirPrefix());
+    program += "7zFM.exe";
+  }
+  
   UString s ('\"');
-  s += fs2us(NDLL::GetModuleDirPrefix());
-  s += "7zFM.exe\" \"%1\"";
+  s += program;
+  s += "\" \"%1\"";
   return s;
 }
 
