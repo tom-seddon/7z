@@ -17,7 +17,7 @@ static const UInt32 kLangIDs[] =
   IDT_ABOUT_INFO
 };
 
-#define kHomePageURL TEXT("http://www.7-zip.org/")
+#define kHomePageURL TEXT("https://github.com/tom-seddon/7z")
 #define kHelpTopic "start.htm"
 
 #define LLL_(quote) L##quote
@@ -26,8 +26,8 @@ static const UInt32 kLangIDs[] =
 bool CAboutDialog::OnInit()
 {
   LangSetDlgItems(*this, kLangIDs, ARRAY_SIZE(kLangIDs));
-  SetItemText(IDT_ABOUT_VERSION, UString("7-Zip " MY_VERSION_CPU));
-  SetItemText(IDT_ABOUT_DATE, LLL(MY_DATE));
+  SetItemText(IDT_ABOUT_VERSION, UString("7-Zip " MY_VERSION_CPU " (TS fork)"));
+  SetItemText(IDT_ABOUT_DATE, LLL(__DATE__) LLL(" at ") LLL(__TIME__));
   
   LangSetWindowText(*this, IDD_ABOUT);
   NormalizePosition();
